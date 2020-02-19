@@ -7,11 +7,11 @@ import sys
 # recursive solution
 
 #first pass notes:
-# if < 0 return 0 base case
+# if < 0 return 0, else set base case of 0 or 1 to 1.
 # save smaller answers in the cache, to speed things up by referring to them later
 # check if answer is in cache, else run loop
 # add together possible combos and pass to the cache
-# return the answer from cache 
+# return n from cache, rinse and repeat
 def eating_cookies(n, cache={0:0, 1:1}):
   if n < 0:
     return 0
