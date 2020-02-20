@@ -2,8 +2,14 @@
 
 import sys
 
+# make a list of all possible moves
+# hints suggest using a helper function to do the recursion
+# need to iterate over moves and create combos based on n
 def rock_paper_scissors(n):
-  pass 
+  moves = ["rock", "paper", "scissors"]
+  plays = []
+
+  return plays
 
 
 if __name__ == "__main__":

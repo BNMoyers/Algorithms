@@ -12,17 +12,19 @@ import sys
 # check if answer is in cache, else run loop
 # add together possible combos and pass to the cache
 # return n from cache, rinse and repeat
-def eating_cookies(n, cache={0:0, 1:1}):
+def eating_cookies(n, cache=None):
   if n < 0:
     return 0
   
   elif n == 0 or n == 1:
     return 1
 
-  elif n in cache:
+  elif cache and n in cache:
     return cache[n]
 
   else:
+    if cache is None:
+      cache = {}
     cache[n] = eating_cookies(n-1, cache) + eating_cookies(n-2, cache) + eating_cookies(n-3, cache)
     return cache[n]
 
