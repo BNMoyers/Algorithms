@@ -5,7 +5,7 @@ import math
   #first pass notes
   #check that both dicts have the same keys
   #loop through the recipe and ingredient dictionaries, comparing values
-  # if any vallue in ingredients is less than the corresponding recipe amount, exit the loop and return 0
+  # if any value in ingredients is less than the corresponding recipe amount, exit the loop and return 0
   # divide each ingredient by the amount in recipe; drop the remainder, push to list
   # return the shortest amount found in list
 def recipe_batches(recipe, ingredients):

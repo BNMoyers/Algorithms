@@ -1,9 +1,23 @@
 #!/usr/bin/python
 
 import argparse
-
+#iterate through the price list
+#hold the highest and lowest number separately
+#hold the current profit margin in temp variable, update only when higher -- problem: this doesn't account for negative numbers; fix by setting profit to the first possible profit margin, rather than 0.
+#when there is a new low number, set it to both variables (so that you're only comparing possible profits that come after )
 def find_max_profit(prices):
-  pass
+  high = prices[0]
+  low = prices[0]
+  profit = prices[1] - prices[0]
+
+  for i in prices:
+    if i < low:
+     high = i
+     low = i
+    elif i > high:
+      high = i
+      profit = high - low
+  return profit
 
 
 if __name__ == '__main__':
